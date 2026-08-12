@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   description: 'A modern 2026 tech-first hybrid developer bridging civil infrastructure (Homes, Roads, Civil) and digital solutions (Software, IT Support).',
   keywords: ['Mohis Developers', 'Home Construction', 'Road Infrastructure', 'Civil Engineering', 'IT Solutions', 'Software Development', 'IT Support'],
   icons: {
-    icon: '/favicon.png',
+    icon: '/fav.png',
     shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    apple: '/fav.png',
   },
 };
 
