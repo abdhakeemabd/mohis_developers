@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: 'Mohis Developers | Engineering Physical Foundations. Building Digital Futures.',
   description: 'A modern 2026 tech-first hybrid developer bridging civil infrastructure (Homes, Roads, Civil) and digital solutions (Software, IT Support).',
   keywords: ['Mohis Developers', 'Home Construction', 'Road Infrastructure', 'Civil Engineering', 'IT Solutions', 'Software Development', 'IT Support'],
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
