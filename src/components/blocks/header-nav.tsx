@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { MohisLogo } from '@/components/ui/logo';
 import { NAV_ROUTES } from '@/lib/data';
 import { Menu, X, PhoneCall, ArrowRight } from 'lucide-react';
@@ -11,6 +12,7 @@ interface HeaderNavProps {
 
 export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-40 w-full bg-white/85 backdrop-blur-md border-b border-navy/10 transition-all duration-300">
@@ -18,22 +20,31 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenModal }) => {
         <div className="flex items-center justify-between h-20">
           
           {/* Left: Mohis Developers Logo */}
-          <a href="#" className="flex items-center focus:outline-none">
+          <a href="/" className="flex items-center focus:outline-none">
             <MohisLogo />
           </a>
 
           {/* Center Links (Desktop) */}
           <nav className="hidden md:flex items-center space-x-8">
-            {NAV_ROUTES.map((route) => (
-              <a
-                key={route.label}
-                href={route.href}
-                className="text-sm font-semibold text-navy/80 hover:text-navy hover:scale-105 transition-all duration-200 relative group"
-              >
-                {route.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
+            {NAV_ROUTES.map((route) => {
+              const isActive = pathname === route.href;
+              return (
+                <a
+                  key={route.label}
+                  href={route.href}
+                  className={`text-sm font-semibold transition-all duration-200 relative group ${
+                    isActive ? 'text-navy font-bold' : 'text-navy/70 hover:text-navy'
+                  }`}
+                >
+                  {route.label}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-gold transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  />
+                </a>
+              );
+            })}
           </nav>
 
           {/* Right CTAs (Desktop) */}
@@ -70,16 +81,23 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenModal }) => {
       {mobileMenuOpen && (
         <div className="md:hidden bg-white border-b border-navy/10 px-4 pt-2 pb-6 space-y-4 shadow-xl">
           <div className="flex flex-col space-y-3 pt-2">
-            {NAV_ROUTES.map((route) => (
-              <a
-                key={route.label}
-                href={route.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 rounded-lg text-base font-semibold text-navy hover:bg-navy/5"
-              >
-                {route.label}
-              </a>
-            ))}
+            {NAV_ROUTES.map((route) => {
+              const isActive = pathname === route.href;
+              return (
+                <a
+                  key={route.label}
+                  href={route.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`px-3.5 py-2.5 rounded-xl text-base font-semibold transition-all ${
+                    isActive
+                      ? 'bg-navy text-gold font-bold shadow-md'
+                      : 'text-navy hover:bg-navy/5'
+                  }`}
+                >
+                  {route.label}
+                </a>
+              );
+            })}
           </div>
 
           <div className="pt-4 border-t border-gray-100 flex flex-col space-y-3">

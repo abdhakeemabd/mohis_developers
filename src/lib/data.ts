@@ -1,10 +1,11 @@
 import { ServiceItem, AdvantagePillar, NavRoute } from '@/types';
 
 export const NAV_ROUTES: NavRoute[] = [
-  { label: 'Services', href: '#services' },
+  { label: 'Home', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'About', href: '/about' },
   { label: 'Our Work', href: '/our-work' },
-  { label: 'How We Work', href: '#why-mohis' },
-  { label: 'Tech & Infra', href: '#tech-infra' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export const SERVICES_DATA: ServiceItem[] = [

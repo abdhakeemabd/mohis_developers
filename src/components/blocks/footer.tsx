@@ -40,11 +40,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
 
       {/* Main Footer Links */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 lg:gap-12">
           
           {/* Brand Info */}
-          <div className="md:col-span-5 space-y-6">
-            <MohisLogo variant="light" />
+          <div className="md:col-span-4 space-y-6">
+            <a href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <MohisLogo variant="light" />
+            </a>
             <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
               Mohis Developers is an early-stage hybrid developer operating at the intersection of Physical Infrastructure (Civil, Homes, Roads) and Digital Solutions (Software, IT Support).
             </p>
@@ -54,29 +56,63 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="md:col-span-3 space-y-4">
+          {/* Navigation */}
+          <div className="md:col-span-2 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-gold">
               Navigation
             </h4>
             <ul className="space-y-2.5 text-sm font-medium">
               {NAV_ROUTES.map((route) => (
                 <li key={route.label}>
-                  <a href={route.href} className="text-gray-300 hover:text-white transition-colors">
+                  <a href={route.href} className="text-gray-300 hover:text-gold transition-colors">
                     {route.label}
                   </a>
                 </li>
               ))}
               <li>
-                <button onClick={onOpenModal} className="text-gray-300 hover:text-white transition-colors text-left">
-                  Book Consultation
+                <button onClick={onOpenModal} className="text-gray-300 hover:text-gold transition-colors text-left">
+                  Contact Us
                 </button>
               </li>
             </ul>
           </div>
 
+          {/* Our Services */}
+          <div className="md:col-span-3 space-y-4">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-gold">
+              Our Services
+            </h4>
+            <ul className="space-y-2.5 text-sm font-medium">
+              <li>
+                <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
+                  Home Construction
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
+                  Road & Infrastructure
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
+                  Civil & Structural Builds
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
+                  Software & IT Solutions
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
+                  24/7 Managed IT Support
+                </a>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact Details */}
-          <div className="md:col-span-4 space-y-4">
+          <div className="md:col-span-3 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-gold">
               Contact & HQ
             </h4>
@@ -87,13 +123,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="mailto:contact@mohisdevelopers.com" className="hover:text-white">
+                <a href="mailto:contact@mohisdevelopers.com" className="hover:text-white transition-colors">
                   contact@mohisdevelopers.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <PhoneCall className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-white font-mono">
+                <a href="tel:+919876543210" className="hover:text-white font-mono transition-colors">
                   +91 98765 43210
                 </a>
               </div>

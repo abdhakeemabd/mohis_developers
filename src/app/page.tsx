@@ -33,9 +33,6 @@ export default function Home() {
       {/* Startup Advantage / Why Mohis */}
       <WhyMohis onOpenModal={handleOpenModal} />
 
-      {/* Tech & Infrastructure Stack Showcase */}
-      <TechInfraShowcase onOpenModal={handleOpenModal} />
-
       {/* Footer */}
       <Footer onOpenModal={handleOpenModal} />
 
