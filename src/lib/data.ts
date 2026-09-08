@@ -2,6 +2,7 @@ import { ServiceItem, AdvantagePillar, NavRoute } from '@/types';
 
 export const NAV_ROUTES: NavRoute[] = [
   { label: 'Services', href: '#services' },
+  { label: 'Our Work', href: '/our-work' },
   { label: 'How We Work', href: '#why-mohis' },
   { label: 'Tech & Infra', href: '#tech-infra' },
 ];

@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { HeaderNav } from '@/components/blocks/header-nav';
 import { HeroSection } from '@/components/blocks/hero-section';
 import { ServicesGrid } from '@/components/blocks/services-grid';
+import { OurWork } from '@/components/blocks/our-work';
 import { WhyMohis } from '@/components/blocks/why-mohis';
 import { TechInfraShowcase } from '@/components/blocks/tech-infra-showcase';
 import { Footer } from '@/components/blocks/footer';
@@ -25,6 +26,9 @@ export default function Home() {
 
       {/* Services Grid (5 Core Offerings) */}
       <ServicesGrid onOpenModal={handleOpenModal} />
+
+      {/* Our Work Portfolio Showcase */}
+      <OurWork onOpenModal={handleOpenModal} teaser />
 
       {/* Startup Advantage / Why Mohis */}
       <WhyMohis onOpenModal={handleOpenModal} />

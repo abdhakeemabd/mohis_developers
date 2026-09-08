@@ -29,7 +29,7 @@ export const WhyMohis: React.FC<WhyMohisProps> = ({ onOpenModal }) => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold/20 border border-gold/40 text-gold text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-950/80 border border-gold/50 text-gold-light text-xs font-bold uppercase tracking-wider shadow-sm">
             <span>The Mohis Advantage</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
@@ -91,7 +91,7 @@ export const WhyMohis: React.FC<WhyMohisProps> = ({ onOpenModal }) => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-navy px-3 py-1 rounded-full inline-block">
+              <span className="text-xs font-bold uppercase tracking-widest text-gold-light bg-navy px-3.5 py-1.5 rounded-full inline-block">
                 Architectural & IT Integration
               </span>
               <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">

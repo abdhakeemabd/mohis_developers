@@ -54,3 +54,36 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Scrollbar Hide — used in lightbox filmstrip */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Lightbox backdrop animation */
+@keyframes lb-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Our Work gallery — masonry column gap fix */
+.columns-1 > *,
+.columns-2 > *,
+.sm\:columns-2 > *,
+.lg\:columns-3 > * {
+  break-inside: avoid;
+}
+
+/* Smooth image hover zoom */
+.group:hover img {
+  transform-origin: center;
+}
+
+/* Lightbox keyboard hint */
+.lb-hint {
+  animation: lb-fade-in 0.5s ease 1s both;
+}

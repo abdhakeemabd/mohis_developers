@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import logoImg from '@/assets/image/logo.png';
+import logoImg from '@/assets/image/logo.webp';
 
 interface LogoProps {
   className?: string;
@@ -19,6 +19,7 @@ export const MohisLogo: React.FC<LogoProps> = ({
         <Image 
           src={logoImg} 
           alt="Mohis Developers Logo" 
+          width={54}
           height={48} 
           className="h-11 w-auto object-contain transition-transform duration-300 hover:scale-105" 
           priority
@@ -27,3 +28,4 @@ export const MohisLogo: React.FC<LogoProps> = ({
     </div>
   );
 };
+
