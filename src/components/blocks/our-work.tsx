@@ -13,11 +13,35 @@ import {
 import Fancybox from '@/components/ui/fancybox';
 import { ImageWithSkeleton } from '@/components/ui/image-skeleton';
 
+import work1 from '@/assets/work/1.webp';
+import work2 from '@/assets/work/2.webp';
+import work3 from '@/assets/work/3.webp';
+import work4 from '@/assets/work/4.webp';
+import work5 from '@/assets/work/5.webp';
+import work6 from '@/assets/work/6.webp';
+import work7 from '@/assets/work/7.webp';
+import work8 from '@/assets/work/8.webp';
+import work9 from '@/assets/work/9.webp';
+import work10 from '@/assets/work/10.webp';
+import work11 from '@/assets/work/11.webp';
+import work12 from '@/assets/work/12.webp';
+import work13 from '@/assets/work/13.webp';
+import work14 from '@/assets/work/14.webp';
+import work15 from '@/assets/work/15.webp';
+import work16 from '@/assets/work/16.webp';
+import work17 from '@/assets/work/17.webp';
+import work18 from '@/assets/work/18.webp';
+import work19 from '@/assets/work/19.webp';
+import work20 from '@/assets/work/20.webp';
+import work21 from '@/assets/work/21.webp';
+import work22 from '@/assets/work/22.webp';
+import { StaticImageData } from 'next/image';
+
 // ─── Work Image Data ─────────────────────────────────────────────────────────
 
 interface WorkImage {
   id: number;
-  src: string;
+  src: string | StaticImageData;
   alt: string;
   title: string;
   category: 'Interior' | 'Exterior' | 'Civil' | 'All';
@@ -27,7 +51,7 @@ interface WorkImage {
 const WORK_IMAGES: WorkImage[] = [
   {
     id: 1,
-    src: '/work/1.webp',
+    src: work1,
     alt: 'Modern Bedroom Interior Design with Platform Bed',
     title: 'Master Bedroom Suite',
     category: 'Interior',
@@ -35,7 +59,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 2,
-    src: '/work/2.webp',
+    src: work2,
     alt: 'Luxury Interior Design Project',
     title: 'Luxury Living Space',
     category: 'Interior',
@@ -43,7 +67,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 3,
-    src: '/work/3.webp',
+    src: work3,
     alt: 'Contemporary Interior Design',
     title: 'Contemporary Living Room',
     category: 'Interior',
@@ -51,7 +75,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 4,
-    src: '/work/4.webp',
+    src: work4,
     alt: 'Modern Interior Architecture',
     title: 'Modern Hallway Design',
     category: 'Interior',
@@ -59,7 +83,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 5,
-    src: '/work/5.webp',
+    src: work5,
     alt: 'Premium Wardrobe and Dresser Design',
     title: 'Premium Wardrobe Suite',
     category: 'Interior',
@@ -67,7 +91,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 6,
-    src: '/work/6.webp',
+    src: work6,
     alt: 'Elegant Room Interior',
     title: 'Elegant Room Concept',
     category: 'Interior',
@@ -75,7 +99,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 7,
-    src: '/work/7.webp',
+    src: work7,
     alt: 'Civil Structure Construction',
     title: 'Civil Structure Build',
     category: 'Civil',
@@ -83,7 +107,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 8,
-    src: '/work/8.webp',
+    src: work8,
     alt: 'Road Infrastructure Project',
     title: 'Infrastructure Development',
     category: 'Civil',
@@ -91,7 +115,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 9,
-    src: '/work/9.webp',
+    src: work9,
     alt: 'Large Scale Construction',
     title: 'Large-Scale Build',
     category: 'Civil',
@@ -99,7 +123,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 10,
-    src: '/work/10.webp',
+    src: work10,
     alt: 'Modern Dining Area with Marble Table',
     title: 'Dining Area Design',
     category: 'Interior',
@@ -107,7 +131,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 11,
-    src: '/work/11.webp',
+    src: work11,
     alt: 'Residential Exterior',
     title: 'Residential Exterior',
     category: 'Exterior',
@@ -115,7 +139,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 12,
-    src: '/work/12.webp',
+    src: work12,
     alt: 'Modern Home Exterior',
     title: 'Modern Facade Design',
     category: 'Exterior',
@@ -123,7 +147,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 13,
-    src: '/work/13.webp',
+    src: work13,
     alt: 'Luxury Villa Exterior Design',
     title: 'Luxury Villa Exterior',
     category: 'Exterior',
@@ -131,7 +155,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 14,
-    src: '/work/14.webp',
+    src: work14,
     alt: 'Premium House Build',
     title: 'Premium House Build',
     category: 'Exterior',
@@ -139,7 +163,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 15,
-    src: '/work/15.webp',
+    src: work15,
     alt: 'Beautiful Home with Garden - Kerala Style Architecture',
     title: 'Kerala-Style Residence',
     category: 'Exterior',
@@ -147,7 +171,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 16,
-    src: '/work/16.webp',
+    src: work16,
     alt: 'Modern Exterior Architecture',
     title: 'Contemporary Facade',
     category: 'Exterior',
@@ -155,7 +179,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 17,
-    src: '/work/17.webp',
+    src: work17,
     alt: 'Interior Design Details',
     title: 'Interior Finishing',
     category: 'Interior',
@@ -163,7 +187,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 18,
-    src: '/work/18.webp',
+    src: work18,
     alt: 'Architectural Interior Details',
     title: 'Architectural Details',
     category: 'Interior',
@@ -171,10 +195,34 @@ const WORK_IMAGES: WorkImage[] = [
   },
   {
     id: 19,
-    src: '/work/19.webp',
+    src: work19,
     alt: 'Luxury Master Bedroom with Sage Accents',
     title: 'Luxury Master Bedroom',
     category: 'Interior',
+    span: 'wide',
+  },
+  {
+    id: 20,
+    src: work20,
+    alt: 'Bespoke Executive Interior Project',
+    title: 'Executive Interior Design',
+    category: 'Interior',
+    span: 'wide',
+  },
+  {
+    id: 21,
+    src: work21,
+    alt: 'Modern Architectural Elevation & Exterior',
+    title: 'Modern Architectural Villa',
+    category: 'Exterior',
+    span: 'wide',
+  },
+  {
+    id: 22,
+    src: work22,
+    alt: 'Contemporary Residential Build Showcase',
+    title: 'Contemporary Architectural Residence',
+    category: 'Exterior',
     span: 'wide',
   },
 ];
@@ -322,14 +370,16 @@ export const OurWork: React.FC<OurWorkProps> = ({ onOpenModal, isPage = false, t
                   : 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4'
               }
             >
-              {displayImages.map((img, idx) => (
-                <motion.a
-                  key={img.id}
-                  href={img.src}
-                  data-fancybox="gallery"
-                  data-caption={img.title}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
+              {displayImages.map((img, idx) => {
+                const imageSrc = typeof img.src === 'string' ? img.src : img.src.src;
+                return (
+                  <motion.a
+                    key={img.id}
+                    href={imageSrc}
+                    data-fancybox="gallery"
+                    data-caption={img.title}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: (idx % 6) * 0.07 }}
                   className={`relative group cursor-pointer overflow-hidden rounded-2xl border border-white/10 hover:border-gold/50 transition-all duration-500 block ${
@@ -377,7 +427,8 @@ export const OurWork: React.FC<OurWorkProps> = ({ onOpenModal, isPage = false, t
                     </div>
                   </div>
                 </motion.a>
-              ))}
+              );
+            })}
             </motion.div>
           </AnimatePresence>
         </Fancybox>

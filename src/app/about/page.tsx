@@ -90,6 +90,108 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Leadership & Management Team */}
+      <section className="py-20 bg-gray-50 border-t border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-14 space-y-4">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-navy px-4 py-1.5 rounded-full inline-block">
+              Leadership & Executive Board
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight">
+              Meet Our Management Team
+            </h2>
+            <p className="text-gray-600 text-base font-medium">
+              Guiding our physical infrastructure and digital innovation milestones with executive excellence.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: 'Latheef', role: 'Managing Director (MD)', badge: 'Executive Board' },
+              { name: 'Musthafa', role: 'Chairman', badge: 'Chairman' },
+              { name: 'Sreenivasan', role: 'General Manager (GM)', badge: 'Operations' },
+              { name: 'Risvana', role: 'Marketing Manager', badge: 'Growth & Strategy' },
+            ].map((member, i) => (
+              <div
+                key={i}
+                className="p-6 rounded-3xl bg-white border border-gray-200 shadow-md hover:shadow-xl hover:border-gold/50 transition-all text-center space-y-3 group"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-navy text-gold font-extrabold text-xl flex items-center justify-center mx-auto shadow-md group-hover:bg-gold group-hover:text-navy transition-colors">
+                  {member.name.charAt(0)}
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono font-extrabold uppercase tracking-wider text-gold bg-navy/5 px-2.5 py-1 rounded-full inline-block mb-1 border border-gold/20">
+                    {member.badge}
+                  </span>
+                  <h3 className="text-xl font-extrabold text-navy">{member.name}</h3>
+                  <p className="text-sm font-semibold text-gray-500">{member.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Web Application Showcase (eacyclic) */}
+      <section className="py-20 bg-navy text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-4">
+            <span className="text-xs font-extrabold uppercase tracking-widest text-gold bg-gold/10 px-4 py-1.5 rounded-full inline-block border border-gold/30">
+              Web & App Development Showcase
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+              Full-Stack E-Commerce & Logistics Platform
+            </h2>
+            <p className="text-gold font-mono text-sm font-semibold">
+              Project Case Study: eacyclic
+            </p>
+          </div>
+
+          <div className="p-8 sm:p-10 rounded-3xl bg-navy-950 border border-gold/30 shadow-2xl space-y-8">
+            <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
+              <span className="text-gray-400 font-bold mr-2">Tech Stack:</span>
+              {['React 19', 'Vite 7', 'Django REST Framework', 'Python', 'PostgreSQL / SQLite', 'Tailwind CSS v4', 'Context API', 'Recharts', 'Framer Motion'].map((tech, idx) => (
+                <span key={idx} className="bg-white/10 text-gold px-3 py-1 rounded-full border border-white/10">
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm leading-relaxed text-gray-300">
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-gold font-bold text-base">✓</span>
+                  <p><strong className="text-white">Full-Stack Enterprise Architecture:</strong> Architected customer-facing storefront and administrative control panel with lazy-loaded route splitting.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-gold font-bold text-base">✓</span>
+                  <p><strong className="text-white">RESTful Backend APIs:</strong> Django & DRF backend handling Token Auth, catalog management, shopping carts, and order fulfillment workflows.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-gold font-bold text-base">✓</span>
+                  <p><strong className="text-white">Modular State Management:</strong> React Context Providers (UserProvider, CartProvider, ProductProvider, AdminProvider) for seamless global state flow.</p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-gold font-bold text-base">✓</span>
+                  <p><strong className="text-white">Admin BI Analytics Dashboard:</strong> Interactive visual charts (Recharts) tracking revenue, order volumes, inventory, and inquiry trends in real time.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-gold font-bold text-base">✓</span>
+                  <p><strong className="text-white">Logistics & Delivery Tracking:</strong> End-to-end driver assignment, tracking number updates, estimated delivery calculation, and lifecycle sync.</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-gold font-bold text-base">✓</span>
+                  <p><strong className="text-white">SEO Best Practices:</strong> Integrated react-helmet-async for dynamic page metadata alongside automated backend sitemap generation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Mohis Advantage Section */}
       <WhyMohis onOpenModal={handleOpenModal} />
 

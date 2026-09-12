@@ -121,7 +121,7 @@ export const DiscoveryModal: React.FC<DiscoveryModalProps> = ({ isOpen, onClose 
                       </label>
                       <input
                         type="tel"
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 97452 57040"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/30 text-sm text-navy"

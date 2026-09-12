@@ -41,17 +41,17 @@ export const SERVICES_DATA: ServiceItem[] = [
   },
   {
     id: 'it-solutions',
-    title: 'IT SOLUTIONS',
+    title: 'WEB & APPLICATION DEVELOPMENT',
     category: 'Digital',
-    shortDesc: 'Custom software, Web & Mobile apps, SEO, Digital Marketing, Social Media Ads, and Poster Designs.',
-    fullDesc: 'Engineering enterprise software, web platforms, and growth engines. We build scalable digital products while driving brand visibility through targeted SEO, social media ad campaigns, performance marketing, and creative poster designs.',
+    shortDesc: 'Enterprise web application development, custom websites, SEO, Social Media Management, and full-stack software solutions.',
+    fullDesc: 'Architecting enterprise web applications, full-stack platforms, and high-performance digital solutions (e.g. eacyclic full-stack e-commerce & logistics management platform). We build scalable systems using modern tech stacks (React 19, Vite, Django REST Framework, Python, PostgreSQL, Tailwind CSS) while amplifying reach via search engine optimization (SEO) and social media management.',
     iconName: 'Code2',
     features: [
-      'Full-Stack Web & Mobile Apps',
-      'SEO & Performance Digital Marketing',
-      'Social Media Ads Management (Meta / Google)',
-      'Creative Branding & Poster Designs',
-      'Cloud Architecture (AWS / GCP / Azure)'
+      'Web Application Development (React 19, Vite, Django DRF)',
+      'Website Development (e.g. eacyclic e-commerce platform)',
+      'SEO & Search Engine Optimization',
+      'Social Media Management & Digital Marketing',
+      'Full-Stack E-Commerce & Business Dashboards'
     ],
     badgeText: 'Digital Future'
   },
