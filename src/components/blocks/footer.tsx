@@ -69,11 +69,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
                   </a>
                 </li>
               ))}
-              <li>
-                <button onClick={onOpenModal} className="text-gray-300 hover:text-gold transition-colors text-left">
-                  Contact Us
-                </button>
-              </li>
             </ul>
           </div>
 
@@ -101,6 +96,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
               <li>
                 <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
                   Software & IT Solutions
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
+                  Web Application Development
                 </a>
               </li>
               <li>
