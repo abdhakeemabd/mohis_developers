@@ -28,3 +28,30 @@ export interface NavRoute {
   label: string;
   href: string;
 }
+
+export interface TeamSocials {
+  linkedin?: string;
+  twitter?: string;
+  instagram?: string;
+  facebook?: string;
+  email?: string;
+  phone?: string;
+}
+
+export interface TeamMember {
+  id: string;
+  name: string;
+  role: string;
+  badge: string;
+  bio: string;
+  experience: string;
+  avatarLetter: string;
+  avatarUrl: string;
+  socials: TeamSocials;
+}
+
+export interface SocialChannel {
+  name: string;
+  href: string;
+  iconName: string;
+}

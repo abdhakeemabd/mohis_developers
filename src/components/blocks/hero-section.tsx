@@ -65,14 +65,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenModal }) => {
 
             {/* Main CTAs */}
             <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <button
-                onClick={onOpenModal}
+              <a
+                href="/contact"
                 className="px-8 py-4 bg-gold text-navy font-extrabold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-light transition-all shadow-xl hover:shadow-gold/30 hover:-translate-y-0.5 flex items-center justify-center gap-3 group"
               >
                 <Calendar className="w-5 h-5" />
-                <span>Schedule a Free Consultation</span>
+                <span>Contact Our Experts</span>
                 <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </button>
+              </a>
 
               <a
                 href="#services"

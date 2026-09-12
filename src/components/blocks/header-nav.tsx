@@ -49,19 +49,13 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenModal }) => {
 
           {/* Right CTAs (Desktop) */}
           <div className="hidden lg:flex items-center space-x-4">
-            <button
-              onClick={onOpenModal}
-              className="px-4 py-2.5 rounded-xl border-2 border-navy text-navy font-bold text-xs uppercase tracking-wider hover:bg-navy hover:text-white transition-all duration-300 shadow-sm"
+            <a
+              href="/contact"
+              className="px-5 py-2.5 rounded-xl bg-gold text-navy font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all duration-300 shadow-md hover:shadow-gold/20 flex items-center gap-2 group"
             >
-              Contact Us
-            </button>
-            <button
-              onClick={onOpenModal}
-              className="px-5 py-2.5 rounded-xl bg-gold text-navy font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all duration-300 shadow-md hover:shadow-gold/20 hover:shadow-lg flex items-center gap-2 group"
-            >
-              <span>Book a Discovery Call</span>
+              <span>Contact Us</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -101,19 +95,14 @@ export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenModal }) => {
           </div>
 
           <div className="pt-4 border-t border-gray-100 flex flex-col space-y-3">
-            <button
-              onClick={() => { setMobileMenuOpen(false); onOpenModal(); }}
-              className="w-full py-3 rounded-xl border-2 border-navy text-navy font-bold text-sm uppercase tracking-wider text-center"
-            >
-              Contact Us
-            </button>
-            <button
-              onClick={() => { setMobileMenuOpen(false); onOpenModal(); }}
+            <a
+              href="/contact"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3 rounded-xl bg-gold text-navy font-bold text-sm uppercase tracking-wider text-center shadow-md flex items-center justify-center gap-2"
             >
               <PhoneCall className="w-4 h-4" />
-              <span>Book a Discovery Call</span>
-            </button>
+              <span>Contact Us</span>
+            </a>
           </div>
         </div>
       )}

@@ -2,8 +2,9 @@
 
 import React from 'react';
 import { MohisLogo } from '@/components/ui/logo';
-import { NAV_ROUTES } from '@/lib/data';
+import { NAV_ROUTES, COMPANY_SOCIALS } from '@/lib/data';
 import { PhoneCall, Mail, MapPin, ArrowRight, ShieldCheck } from 'lucide-react';
+import { LinkedInIcon, TwitterIcon, InstagramIcon, FacebookIcon, YoutubeIcon } from '@/components/ui/social-icons';
 
 interface FooterProps {
   onOpenModal: () => void;
@@ -26,14 +27,14 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
             Whether you require custom home builds, roadway civil engineering, or enterprise software systems, Mohis Developers delivers turnkey solutions.
           </p>
           <div className="pt-2">
-            <button
-              onClick={onOpenModal}
+            <a
+              href="/contact"
               className="px-8 py-4 bg-gold text-navy font-extrabold text-sm uppercase tracking-wider rounded-xl hover:bg-gold-light transition-all shadow-xl hover:shadow-gold/20 inline-flex items-center gap-3 group"
             >
               <PhoneCall className="w-5 h-5" />
-              <span>Book a Consultation Now</span>
+              <span>Contact Our Team</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -50,9 +51,34 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
             <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
               Mohis Developers is an early-stage hybrid developer operating at the intersection of Physical Infrastructure (Civil, Homes, Roads) and Digital Solutions (Software, IT Support).
             </p>
+            
             <div className="flex items-center gap-2 text-xs font-semibold text-gold">
               <ShieldCheck className="w-4 h-4" />
               <span>2026 Modern Engineering & IT Certified</span>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="space-y-2 pt-2">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-gold/80 block">
+                Connect With Us
+              </span>
+              <div className="flex items-center gap-2.5">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" className="p-2.5 rounded-xl bg-white/5 hover:bg-gold hover:text-navy text-gold transition-all duration-200 border border-gold/20 hover:scale-110 flex items-center justify-center">
+                  <LinkedInIcon className="w-4 h-4" />
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" title="Twitter / X" className="p-2.5 rounded-xl bg-white/5 hover:bg-gold hover:text-navy text-gold transition-all duration-200 border border-gold/20 hover:scale-110 flex items-center justify-center">
+                  <TwitterIcon className="w-4 h-4" />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" className="p-2.5 rounded-xl bg-white/5 hover:bg-gold hover:text-navy text-gold transition-all duration-200 border border-gold/20 hover:scale-110 flex items-center justify-center">
+                  <InstagramIcon className="w-4 h-4" />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" className="p-2.5 rounded-xl bg-white/5 hover:bg-gold hover:text-navy text-gold transition-all duration-200 border border-gold/20 hover:scale-110 flex items-center justify-center">
+                  <FacebookIcon className="w-4 h-4" />
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" className="p-2.5 rounded-xl bg-white/5 hover:bg-gold hover:text-navy text-gold transition-all duration-200 border border-gold/20 hover:scale-110 flex items-center justify-center">
+                  <YoutubeIcon className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </div>
 
