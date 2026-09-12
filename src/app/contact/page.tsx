@@ -3,11 +3,9 @@
 import React, { useState } from 'react';
 import { HeaderNav } from '@/components/blocks/header-nav';
 import { Footer } from '@/components/blocks/footer';
-import { DiscoveryModal } from '@/components/blocks/discovery-modal';
 import { PhoneCall, Mail, MapPin, Clock, Send, CheckCircle2 } from 'lucide-react';
 
 export default function ContactPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -17,9 +15,6 @@ export default function ContactPage() {
     message: '',
   });
 
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
@@ -27,7 +22,7 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen flex flex-col bg-white">
-      <HeaderNav onOpenModal={handleOpenModal} />
+      <HeaderNav />
 
       {/* Header Banner */}
       <div className="pt-28 pb-16 bg-navy text-white text-center relative overflow-hidden border-b border-gold/20">
@@ -98,6 +93,9 @@ export default function ContactPage() {
                     <h4 className="text-base font-bold text-navy">Direct Phone & WhatsApp</h4>
                     <a href="tel:+919876543210" className="text-navy font-mono font-bold text-sm hover:text-gold">
                       +91 98765 43210
+                    </a><br />
+                    <a href="tel:+919745257040" className="text-navy font-mono font-bold text-sm hover:text-gold">
+                      +91 97452 57040
                     </a>
                     <p className="text-gray-500 text-xs mt-0.5">Mon – Sat, 9:00 AM – 7:00 PM IST</p>
                   </div>
@@ -186,9 +184,8 @@ export default function ContactPage() {
                     >
                       <option value="Home Construction">Home Construction & Interiors</option>
                       <option value="Road Infrastructure">Road & Infrastructure Engineering</option>
-                      <option value="Civil Structures">Civil & Commercial Builds</option>
-                      <option value="IT Solutions">Software Development & Digital Marketing</option>
-                      <option value="IT Support">Managed IT & Support Services</option>
+                      <option value="Web & Application Development">Web & Application Development</option>
+                      <option value="Mobile App & Social Media">Mobile App & Social Media Management</option>
                     </select>
                   </div>
 
@@ -220,9 +217,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Footer onOpenModal={handleOpenModal} />
-
-      <DiscoveryModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <Footer />
     </main>
   );
 }

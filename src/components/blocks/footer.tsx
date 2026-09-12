@@ -7,10 +7,10 @@ import { PhoneCall, Mail, MapPin, ArrowRight, ShieldCheck } from 'lucide-react';
 import { LinkedInIcon, TwitterIcon, InstagramIcon, FacebookIcon, YoutubeIcon } from '@/components/ui/social-icons';
 
 interface FooterProps {
-  onOpenModal: () => void;
+  onOpenModal?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
+export const Footer: React.FC<FooterProps> = () => {
   return (
     <footer className="bg-navy text-white relative overflow-hidden border-t border-gold/20">
       
@@ -121,17 +121,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenModal }) => {
               </li>
               <li>
                 <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
-                  Software & IT Solutions
+                  Web & Application Development
                 </a>
               </li>
               <li>
                 <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
-                  Web Application Development
+                  Mobile Application Development
                 </a>
               </li>
               <li>
                 <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
-                  24/7 Managed IT Support
+                  SEO & Search Engine Optimization
+                </a>
+              </li>
+              <li>
+                <a href="/services" className="text-gray-300 hover:text-gold transition-colors">
+                  Social Media Management
                 </a>
               </li>
             </ul>

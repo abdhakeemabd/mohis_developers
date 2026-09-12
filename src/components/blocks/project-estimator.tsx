@@ -30,8 +30,8 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = () => {
       icon: Code2,
       services: [
         { id: 'webapp', name: 'Web Application & Platform Dev', estTime: '3 - 8 Weeks', standard: 'React 19, Next.js, Cloud Stack' },
-        { id: 'website', name: 'Custom Corporate Website & SEO', estTime: '2 - 4 Weeks', standard: 'SEO & Mobile Responsive' },
-        { id: 'itsupport', name: '24/7 Managed IT Support', estTime: 'Instant Onboarding', standard: 'Zero-Trust Cybersecurity' },
+        { id: 'mobileapp', name: 'Mobile Application Development', estTime: '4 - 10 Weeks', standard: 'iOS & Android Native / React Native' },
+        { id: 'website', name: 'Corporate Website & SEO Growth', estTime: '2 - 4 Weeks', standard: 'Technical SEO & Mobile Responsive' },
       ]
     }
   ];

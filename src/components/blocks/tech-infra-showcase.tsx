@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 import { HardHat, Server, Check, ArrowRight, Cpu, Layers } from 'lucide-react';
 
 interface TechInfraShowcaseProps {
-  onOpenModal: () => void;
+  onOpenModal?: () => void;
 }
 
-export const TechInfraShowcase: React.FC<TechInfraShowcaseProps> = ({ onOpenModal }) => {
+export const TechInfraShowcase: React.FC<TechInfraShowcaseProps> = () => {
   const [activeTab, setActiveTab] = useState<'physical' | 'digital'>('physical');
 
   const physicalStack = [

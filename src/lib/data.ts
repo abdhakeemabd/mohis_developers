@@ -40,30 +40,49 @@ export const SERVICES_DATA: ServiceItem[] = [
     badgeText: 'Structural Dev'
   },
   {
-    id: 'it-solutions',
+    id: 'web-app-dev',
     title: 'WEB & APPLICATION DEVELOPMENT',
     category: 'Digital',
-    shortDesc: 'Enterprise web application development, custom websites, SEO, Social Media Management, and full-stack software solutions.',
-    fullDesc: 'Architecting enterprise web applications, full-stack platforms, and high-performance digital solutions (e.g. eacyclic full-stack e-commerce & logistics management platform). We build scalable systems using modern tech stacks (React 19, Vite, Django REST Framework, Python, PostgreSQL, Tailwind CSS) while amplifying reach via search engine optimization (SEO) and social media management.',
+    shortDesc: 'Enterprise web application development, custom business websites, and scalable full-stack software solutions.',
+    fullDesc: 'Architecting enterprise web applications, full-stack platforms, and high-performance digital solutions (e.g. eacyclic full-stack e-commerce & logistics management platform). We build scalable systems using modern tech stacks (React 19, Next.js, Vite, Django REST Framework, Python, PostgreSQL, Tailwind CSS).',
     iconName: 'Code2',
     features: [
-      'Web Application Development (React 19, Vite, Django DRF)',
-      'Website Development (e.g. eacyclic e-commerce platform)',
-      'SEO & Search Engine Optimization',
-      'Social Media Management & Digital Marketing',
-      'Full-Stack E-Commerce & Business Dashboards'
+      'Full-Stack Web Applications (React 19, Next.js, Django DRF)',
+      'Custom Corporate & E-Commerce Platforms (e.g. eacyclic)',
+      'RESTful API Backend Architecture & Token Auth',
+      'Real-Time BI Analytics Dashboards & Data Visualization'
     ],
-    badgeText: 'Digital Future'
+    badgeText: 'Digital Engineering'
   },
   {
-    id: 'it-support-digital',
-    title: 'IT SUPPORT & DIGITAL',
+    id: 'mobile-app-dev',
+    title: 'MOBILE APPLICATION DEVELOPMENT',
     category: 'Digital',
-    shortDesc: '24/7 technical support, digital infrastructure management, cybersecurity, and hardware deployment.',
-    fullDesc: 'Managed IT services, network infrastructure setup (fiber optic, structured cabling), active cybersecurity monitoring, and round-the-clock technical operations support.',
-    iconName: 'ShieldCheck',
-    features: ['24/7 Managed IT Service Desk', 'Cybersecurity & Firewalls', 'Structured Cabling & Server Racks', 'Cloud Data Backup & Recovery'],
-    badgeText: 'Managed Services'
+    shortDesc: 'Native & cross-platform iOS and Android mobile app development with real-time cloud backend sync.',
+    fullDesc: 'Designing and deploying high-performance mobile applications for iOS and Android platforms. Built with React Native and native mobile frameworks integrated with cloud backend APIs, push notifications, offline storage, and secure payment gateway integrations.',
+    iconName: 'Smartphone',
+    features: [
+      'Cross-Platform iOS & Android Mobile Apps (React Native)',
+      'Real-Time Cloud Sync & Offline Support',
+      'Push Notifications & User Auth Integration',
+      'App Store & Google Play Store Publishing'
+    ],
+    badgeText: 'Mobile Stack'
+  },
+  {
+    id: 'seo-social-marketing',
+    title: 'SEO & SOCIAL MEDIA MANAGEMENT',
+    category: 'Digital',
+    shortDesc: 'Search engine optimization (SEO), digital marketing campaigns, brand strategy, and active social media management.',
+    fullDesc: 'Boosting brand visibility, organic search engine rankings, and user engagement across India and GCC markets. We execute comprehensive technical SEO audits, keyword ranking strategies, content creation, social media account management, and performance analytics.',
+    iconName: 'TrendingUp',
+    features: [
+      'Technical SEO & Organic Keyword Ranking',
+      'Active Social Media Account Management (Instagram, LinkedIn, Facebook)',
+      'Digital Brand Strategy & Content Creation',
+      'Sitemap, Meta Tag Optimization & Analytics Reporting'
+    ],
+    badgeText: 'Growth & Reach'
   }
 ];
 

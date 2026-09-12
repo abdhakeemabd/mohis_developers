@@ -10,6 +10,8 @@ import {
   Layers, 
   Code2, 
   ShieldCheck, 
+  Smartphone,
+  TrendingUp,
   ArrowRight, 
   CheckCircle, 
   X,
@@ -17,10 +19,10 @@ import {
 } from 'lucide-react';
 
 interface ServicesGridProps {
-  onOpenModal: () => void;
+  onOpenModal?: () => void;
 }
 
-export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenModal }) => {
+export const ServicesGrid: React.FC<ServicesGridProps> = () => {
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
 
   // Map icon names to Lucide Icon components
@@ -31,6 +33,8 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenModal }) => {
       case 'Building2': return <Building2 {...props} />;
       case 'Layers': return <Layers {...props} />;
       case 'Code2': return <Code2 {...props} />;
+      case 'Smartphone': return <Smartphone {...props} />;
+      case 'TrendingUp': return <TrendingUp {...props} />;
       case 'ShieldCheck': return <ShieldCheck {...props} />;
       default: return <Sparkles {...props} />;
     }
@@ -49,7 +53,7 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenModal }) => {
             <span>Core Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight">
-            5 Strategic Offerings for Physical & Digital Scaling
+            4 Strategic Offerings for Physical & Digital Scaling
           </h2>
           <p className="text-base sm:text-lg text-gray-600 font-medium">
             From heavy structural engineering to high-performance web systems, Mohis Developers brings 2026 execution standards to every project.
@@ -185,15 +189,12 @@ export const ServicesGrid: React.FC<ServicesGridProps> = ({ onOpenModal }) => {
                   >
                     Close
                   </button>
-                  <button
-                    onClick={() => {
-                      setSelectedService(null);
-                      onOpenModal();
-                    }}
-                    className="px-6 py-2.5 bg-gold text-navy font-bold rounded-xl text-sm hover:bg-gold-light shadow-md"
+                  <a
+                    href="/contact"
+                    className="px-6 py-2.5 bg-gold text-navy font-bold rounded-xl text-sm hover:bg-gold-light shadow-md inline-block text-center"
                   >
                     Request Proposal for this Service
-                  </button>
+                  </a>
                 </div>
               </motion.div>
             </div>

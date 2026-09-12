@@ -1,21 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { HeaderNav } from '@/components/blocks/header-nav';
 import { ServicesGrid } from '@/components/blocks/services-grid';
 import { TechInfraShowcase } from '@/components/blocks/tech-infra-showcase';
 import { Footer } from '@/components/blocks/footer';
-import { DiscoveryModal } from '@/components/blocks/discovery-modal';
 
 export default function ServicesPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
-
   return (
     <main className="min-h-screen flex flex-col bg-white">
-      <HeaderNav onOpenModal={handleOpenModal} />
+      <HeaderNav />
       
       {/* Header Banner */}
       <div className="pt-28 pb-16 bg-navy text-white text-center relative overflow-hidden border-b border-gold/20">
@@ -33,13 +27,11 @@ export default function ServicesPage() {
         </div>
       </div>
 
-      <ServicesGrid onOpenModal={handleOpenModal} />
+      <ServicesGrid />
 
-      <TechInfraShowcase onOpenModal={handleOpenModal} />
+      <TechInfraShowcase />
 
-      <Footer onOpenModal={handleOpenModal} />
-
-      <DiscoveryModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <Footer />
     </main>
   );
 }

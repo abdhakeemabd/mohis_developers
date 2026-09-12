@@ -7,10 +7,10 @@ import { NAV_ROUTES } from '@/lib/data';
 import { Menu, X, PhoneCall, ArrowRight } from 'lucide-react';
 
 interface HeaderNavProps {
-  onOpenModal: () => void;
+  onOpenModal?: () => void;
 }
 
-export const HeaderNav: React.FC<HeaderNavProps> = ({ onOpenModal }) => {
+export const HeaderNav: React.FC<HeaderNavProps> = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 

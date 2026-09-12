@@ -1,23 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { HeaderNav } from '@/components/blocks/header-nav';
 import { WhyMohis } from '@/components/blocks/why-mohis';
 import { Footer } from '@/components/blocks/footer';
-import { DiscoveryModal } from '@/components/blocks/discovery-modal';
 import { TEAM_MEMBERS } from '@/lib/data';
 import { ShieldCheck, Award, Building2, Cpu, CheckCircle2, ArrowRight, Mail, Phone, User, Briefcase, TrendingUp, UserCheck, Crown } from 'lucide-react';
 import { InstagramIcon, FacebookIcon, UserPersonIcon } from '@/components/ui/social-icons';
 
 export default function AboutPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleOpenModal = () => setIsModalOpen(true);
-  const handleCloseModal = () => setIsModalOpen(false);
-
   return (
     <main className="min-h-screen flex flex-col bg-white">
-      <HeaderNav onOpenModal={handleOpenModal} />
+      <HeaderNav />
 
       {/* Header Banner */}
       <div className="pt-28 pb-16 bg-navy text-white text-center relative overflow-hidden border-b border-gold/20">
@@ -254,11 +248,9 @@ export default function AboutPage() {
       </section>
 
       {/* Why Mohis Advantage Section */}
-      <WhyMohis onOpenModal={handleOpenModal} />
+      <WhyMohis />
 
-      <Footer onOpenModal={handleOpenModal} />
-
-      <DiscoveryModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      <Footer />
     </main>
   );
 }

@@ -6,10 +6,10 @@ import { ADVANTAGE_PILLARS } from '@/lib/data';
 import { Cpu, Zap, Compass, ArrowRight, ShieldAlert, CheckCircle2 } from 'lucide-react';
 
 interface WhyMohisProps {
-  onOpenModal: () => void;
+  onOpenModal?: () => void;
 }
 
-export const WhyMohis: React.FC<WhyMohisProps> = ({ onOpenModal }) => {
+export const WhyMohis: React.FC<WhyMohisProps> = () => {
   const renderPillarIcon = (name: string) => {
     switch (name) {
       case 'Cpu': return <Cpu className="w-8 h-8 text-gold" />;
