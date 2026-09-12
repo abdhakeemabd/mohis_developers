@@ -96,13 +96,13 @@ export const TechInfraShowcase: React.FC<TechInfraShowcaseProps> = ({ onOpenModa
 
         {/* CTA Box */}
         <div className="mt-12 text-center">
-          <button
-            onClick={onOpenModal}
-            className="inline-flex items-center gap-3 px-8 py-3.5 bg-navy text-white font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-navy/90 transition-all shadow-lg"
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-3 px-8 py-4 bg-navy text-white font-extrabold text-xs uppercase tracking-wider rounded-xl hover:bg-gold hover:text-navy transition-all shadow-xl border border-gold/30 group"
           >
             <span>Consult With Our Lead Engineers</span>
-            <ArrowRight className="w-4 h-4 text-gold" />
-          </button>
+            <ArrowRight className="w-4 h-4 text-gold group-hover:text-navy transition-colors" />
+          </a>
         </div>
 
       </div>
