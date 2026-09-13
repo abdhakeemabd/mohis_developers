@@ -178,7 +178,6 @@ export const Footer: React.FC<FooterProps> = () => {
           </div>
           <div className="text-xs text-gray-400 font-medium flex items-center gap-2">
             <span>© {new Date().getFullYear()} Mohis Developers.</span>
-            <span className="text-gold font-bold">Developed by eacyclic</span>
           </div>
         </div>
       </div>
