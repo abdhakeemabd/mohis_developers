@@ -131,6 +131,8 @@ export const STATS_DATA = [
 
 import sreenivasanImg from '@/assets/team/sreenivasan.jpeg';
 import musthafaImg from '@/assets/team/musthafa.jpeg';
+import latheefImg from '@/assets/team/latheef.jpeg';
+
 
 export const TEAM_MEMBERS = [
   {
@@ -142,7 +144,7 @@ export const TEAM_MEMBERS = [
     iconName: 'Award',
     bio: 'Providing executive governance, strategic vision, joint-venture civil infrastructure initiatives, and corporate expansion for Mohis Developers.',
     avatarLetter: 'L',
-    avatarUrl: '',
+    avatarUrl: latheefImg,
     socials: {
       linkedin: 'https://linkedin.com',
       instagram: 'https://instagram.com',
