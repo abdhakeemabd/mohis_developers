@@ -44,13 +44,13 @@ export const SERVICES_DATA: ServiceItem[] = [
     title: 'WEB & APPLICATION DEVELOPMENT',
     category: 'Digital',
     shortDesc: 'Enterprise web application development, custom business websites, and scalable full-stack software solutions.',
-    fullDesc: 'Architecting enterprise web applications, full-stack platforms, and high-performance digital solutions (e.g. eacyclic full-stack e-commerce & logistics management platform). We build scalable systems using modern tech stacks (React 19, Next.js, Vite, Django REST Framework, Python, PostgreSQL, Tailwind CSS).',
+    fullDesc: 'Architecting enterprise web applications, responsive websites, 3D interactive web experiences (Three.js), CMS systems, and scalable digital platforms (e.g. eacyclic full-stack e-commerce & logistics platform). Built with HTML5, CSS3, JavaScript, TypeScript, Three.js, Next.js, NestJS, Node.js, Express, WordPress, Shopify, Laravel, React 19, Python DRF, and Cloud Infrastructure.',
     iconName: 'Code2',
     features: [
-      'Full-Stack Web Applications (React 19, Next.js, Django DRF)',
-      'Custom Corporate & E-Commerce Platforms (e.g. eacyclic)',
-      'RESTful API Backend Architecture & Token Auth',
-      'Real-Time BI Analytics Dashboards & Data Visualization'
+      'Modern Frontend & 3D Interactive Web (HTML5, CSS3, JS/TS, Three.js, React 19, Next.js)',
+      'Full-Stack Backend Services (NestJS, Node.js, Express, Laravel, Python DRF)',
+      'E-Commerce & CMS Systems (Shopify, WordPress, Custom Platforms e.g. eacyclic)',
+      'RESTful & GraphQL API Architecture, Cloud & Token Auth'
     ],
     badgeText: 'Digital Engineering'
   },
@@ -129,17 +129,20 @@ export const STATS_DATA = [
   { value: '2026', label: 'Tech & Civil Standards' }
 ];
 
+import sreenivasanImg from '@/assets/team/sreenivasan.jpeg';
+import musthafaImg from '@/assets/team/musthafa.jpeg';
+
 export const TEAM_MEMBERS = [
   {
     id: 'latheef',
     name: 'Latheef',
-    role: 'Managing Director (MD)',
-    badge: 'Executive Board',
+    role: 'Chairman',
+    badge: 'Executive Governance',
     experience: '18+ Yrs Vision',
-    iconName: 'Briefcase',
-    bio: 'Directing strategic vision, joint-venture civil infrastructure initiatives, and corporate expansion for Mohis Developers.',
+    iconName: 'Award',
+    bio: 'Providing executive governance, strategic vision, joint-venture civil infrastructure initiatives, and corporate expansion for Mohis Developers.',
     avatarLetter: 'L',
-    avatarUrl: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
+    avatarUrl: '',
     socials: {
       linkedin: 'https://linkedin.com',
       instagram: 'https://instagram.com',
@@ -151,13 +154,13 @@ export const TEAM_MEMBERS = [
   {
     id: 'musthafa',
     name: 'Musthafa',
-    role: 'Chairman',
-    badge: 'Executive Governance',
-    experience: '22+ Yrs Governance',
-    iconName: 'Award',
-    bio: 'Providing executive governance, financial stewardship, and institutional partnerships across physical & digital portfolio domains.',
+    role: 'Managing Director (MD)',
+    badge: 'Executive Leadership',
+    experience: '22+ Yrs Leadership',
+    iconName: 'Briefcase',
+    bio: 'Directing operational management, financial stewardship, and institutional partnerships across physical & digital portfolio domains.',
     avatarLetter: 'M',
-    avatarUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80',
+    avatarUrl: musthafaImg,
     socials: {
       linkedin: 'https://linkedin.com',
       instagram: 'https://instagram.com',
@@ -175,7 +178,7 @@ export const TEAM_MEMBERS = [
     iconName: 'ShieldCheck',
     bio: 'Overseeing daily civil site execution, quality assurance protocols, structural safety standards, and project operations.',
     avatarLetter: 'S',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+    avatarUrl: sreenivasanImg,
     socials: {
       linkedin: 'https://linkedin.com',
       instagram: 'https://instagram.com',
@@ -193,7 +196,7 @@ export const TEAM_MEMBERS = [
     iconName: 'TrendingUp',
     bio: 'Leading brand positioning, digital marketing campaigns, SEO strategy, and client relationship expansion across India and GCC.',
     avatarLetter: 'R',
-    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80',
+    avatarUrl: '',
     socials: {
       linkedin: 'https://linkedin.com',
       instagram: 'https://instagram.com',

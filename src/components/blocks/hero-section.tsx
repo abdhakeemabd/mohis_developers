@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Calendar, ChevronRight, ShieldCheck, Cpu, Building2, Code2, CheckCircle2, Zap, ArrowRight, Activity } from 'lucide-react';
+import { Calendar, ChevronRight, ShieldCheck, Building2, Code2, CheckCircle2, Zap, ArrowRight } from 'lucide-react';
 import { STATS_DATA } from '@/lib/data';
 import work7 from '@/assets/work/7.webp';
 import work15 from '@/assets/work/15.webp';
+import eacyclic from '@/assets/image/eacyclic.png';
 import Image from 'next/image';
 
 interface HeroSectionProps {
@@ -32,11 +33,6 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-7 text-left"
           >
-            {/* Startup Tag Badge */}
-            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-xs font-extrabold uppercase tracking-widest text-gold shadow-gold-glow">
-              <span className="w-2.5 h-2.5 rounded-full bg-gold animate-ping" />
-            </div>
-
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] text-white">
               Engineering Physical Foundations.{' '}
@@ -169,39 +165,17 @@ export const HeroSection: React.FC<HeroSectionProps> = () => {
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: -20 }}
                       transition={{ duration: 0.35 }}
-                      className="relative h-[340px] sm:h-[380px] rounded-2xl bg-navy-950 p-6 border border-gold/30 flex flex-col justify-between overflow-hidden"
+                      className="relative h-[340px] sm:h-[380px] rounded-2xl overflow-hidden border border-gold/30 flex flex-col justify-between p-6 group"
                     >
-                      <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#D4AF37_1px,transparent_1px),linear-gradient(to_bottom,#D4AF37_1px,transparent_1px)] bg-[size:20px_20px]" />
-
-                      <div className="relative z-10 flex items-center justify-between border-b border-white/10 pb-3">
-                        <div className="flex items-center gap-2 text-xs font-mono text-emerald-400">
-                          <Activity className="w-4 h-4 animate-pulse" />
-                          <span>FULLSTACK_APP_SYSTEM</span>
-                        </div>
-                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-gold/20 text-gold border border-gold/30">
-                          eacyclic Stack
-                        </span>
-                      </div>
-
-                      {/* Code / Architecture Telemetry Card */}
-                      <div className="relative z-10 space-y-3 bg-navy-900/80 p-4 rounded-xl border border-white/10 font-mono text-xs text-gray-300">
-                        <div className="text-gold font-bold">// Web & Software Architecture</div>
-                        <div className="text-gray-400 text-[11px] space-y-1">
-                          <div>Frontend: <span className="text-white">React 19, Next.js, Vite, Tailwind CSS</span></div>
-                          <div>Backend: <span className="text-white">Django REST Framework, Python, DRF Auth</span></div>
-                          <div>Database: <span className="text-white">PostgreSQL / Cloud Data Backup</span></div>
-                        </div>
-                      </div>
-
-                      <div className="relative z-10 flex items-center justify-between p-3 rounded-xl bg-gold/10 border border-gold/30">
-                        <div className="flex items-center gap-2">
-                          <Cpu className="w-5 h-5 text-gold" />
-                          <span className="text-xs font-bold text-white">Mobile Apps & SEO Growth</span>
-                        </div>
-                        <span className="text-[10px] font-mono font-bold text-gold bg-navy px-2 py-1 rounded">
-                          99.99% SLA
-                        </span>
-                      </div>
+                      {/* Background Digital System Image */}
+                      <Image
+                        src={eacyclic}
+                        alt="Eacyclick E-Commerce Platform Showcase"
+                        fill
+                        className="object-contain bg-white group-hover:scale-[1.02] transition-transform duration-700"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/40 via-transparent to-transparent pointer-events-none" />
                     </motion.div>
                   )}
                 </AnimatePresence>

@@ -7,6 +7,7 @@ import { Footer } from '@/components/blocks/footer';
 import { TEAM_MEMBERS } from '@/lib/data';
 import { ShieldCheck, Award, Building2, Cpu, CheckCircle2, ArrowRight, Mail, Phone, User, Briefcase, TrendingUp, UserCheck, Crown } from 'lucide-react';
 import { InstagramIcon, FacebookIcon, UserPersonIcon } from '@/components/ui/social-icons';
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -120,12 +121,22 @@ export default function AboutPage() {
                     </span>
                   </div>
 
-                  {/* Person Avatar Icon Frame */}
-                  <div className="relative w-20 h-20 mx-auto my-3 flex items-center justify-center">
-                    <div className="w-full h-full rounded-full bg-navy-950 border-2 border-gold/40 flex items-center justify-center text-gold group-hover:border-gold group-hover:bg-gold/10 transition-all duration-300">
-                      <UserPersonIcon className="w-12 h-12 text-gold group-hover:text-gold-light transition-colors" />
+                  {/* Person Avatar Icon / Photo Frame */}
+                  <div className="relative w-24 h-24 mx-auto my-3 flex items-center justify-center">
+                    <div className="w-full h-full rounded-full bg-navy-950 border-2 border-gold/40 overflow-hidden flex items-center justify-center text-gold group-hover:border-gold transition-all duration-300 shadow-xl">
+                      {member.avatarUrl ? (
+                        <Image
+                          src={member.avatarUrl}
+                          alt={member.name}
+                          width={96}
+                          height={96}
+                          className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                        />
+                      ) : (
+                        <UserPersonIcon className="w-12 h-12 text-gold group-hover:text-gold-light transition-colors" />
+                      )}
                     </div>
-                    <span className="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-navy border border-gold text-gold font-bold text-[10px] flex items-center justify-center">
+                    <span className="absolute bottom-0 right-0 w-7 h-7 rounded-full bg-navy border border-gold text-gold font-bold text-[11px] flex items-center justify-center shadow-md">
                       {member.avatarLetter}
                     </span>
                   </div>
@@ -204,9 +215,9 @@ export default function AboutPage() {
 
           <div className="p-8 sm:p-10 rounded-3xl bg-navy-950 border border-gold/30 shadow-2xl space-y-8">
             <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
-              <span className="text-gray-400 font-bold mr-2">Tech Stack:</span>
-              {['React 19', 'Vite 7', 'Django REST Framework', 'Python', 'PostgreSQL / SQLite', 'Tailwind CSS v4', 'Context API', 'Recharts', 'Framer Motion'].map((tech, idx) => (
-                <span key={idx} className="bg-white/10 text-gold px-3 py-1 rounded-full border border-white/10">
+              <span className="text-gray-400 font-bold mr-2">Tech Stack & Frameworks:</span>
+              {['HTML5', 'CSS3', 'JavaScript (ES6+)', 'TypeScript', 'Three.js (3D Web)', 'React 19', 'Next.js', 'NestJS', 'Node.js', 'Express.js', 'WordPress', 'Shopify', 'Laravel', 'Python DRF', 'GraphQL', 'Docker / Cloud', 'PostgreSQL', 'Tailwind CSS'].map((tech, idx) => (
+                <span key={idx} className="bg-white/10 text-gold px-3 py-1 rounded-full border border-white/10 font-bold">
                   {tech}
                 </span>
               ))}
