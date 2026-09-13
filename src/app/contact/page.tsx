@@ -91,10 +91,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="text-base font-bold text-navy">Direct Phone & WhatsApp</h4>
-                    <a href="tel:+919876543210" className="text-navy font-mono font-bold text-sm hover:text-gold">
-                      +91 98765 43210
-                    </a><br />
-                    <a href="tel:+919745257040" className="text-navy font-mono font-bold text-sm hover:text-gold">
+                    <a href="tel:+919745257040" className="text-navy font-mono font-bold text-sm hover:text-gold block">
                       +91 97452 57040
                     </a>
                     <p className="text-gray-500 text-xs mt-0.5">Mon – Sat, 9:00 AM – 7:00 PM IST</p>
@@ -153,7 +150,7 @@ export default function ContactPage() {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="+91 98765 43210"
+                        placeholder="+91 97452 57040"
                         className="w-full px-4 py-3 rounded-xl bg-navy-950 border border-white/15 text-white placeholder-gray-500 focus:outline-none focus:border-gold text-sm"
                       />
                     </div>

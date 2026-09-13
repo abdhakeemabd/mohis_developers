@@ -183,7 +183,7 @@ export default function AboutPage() {
                     <Mail className="w-4 h-4" />
                   </a>
                   <a
-                    href={member.socials.phone || "tel:+919876543210"}
+                    href={member.socials.phone || "tel:+919745257040"}
                     title={`Call ${member.name}`}
                     className="p-2.5 rounded-xl bg-white/5 hover:bg-gold hover:text-navy text-gold transition-all duration-200 border border-gold/20 flex items-center justify-center hover:scale-110"
                   >

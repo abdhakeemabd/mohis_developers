@@ -148,7 +148,7 @@ export const TEAM_MEMBERS = [
       instagram: 'https://instagram.com',
       facebook: 'https://facebook.com',
       email: 'mailto:latheef@mohisdevelopers.com',
-      phone: 'tel:+919876543210'
+      phone: 'tel:+919745257040'
     }
   },
   {
@@ -166,7 +166,7 @@ export const TEAM_MEMBERS = [
       instagram: 'https://instagram.com',
       facebook: 'https://facebook.com',
       email: 'mailto:musthafa@mohisdevelopers.com',
-      phone: 'tel:+919876543210'
+      phone: 'tel:+919745257040'
     }
   },
   {
@@ -202,7 +202,7 @@ export const TEAM_MEMBERS = [
       instagram: 'https://instagram.com',
       facebook: 'https://facebook.com',
       email: 'mailto:risvana@mohisdevelopers.com',
-      phone: 'tel:+919876543210'
+      phone: 'tel:+919745257040'
     }
   }
 ];

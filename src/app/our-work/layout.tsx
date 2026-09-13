@@ -82,7 +82,7 @@ export default function OurWorkLayout({
               logo: 'https://mohisdevelopers.com/fav.png',
               contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+91-98765-43210',
+                telephone: '+91-97452-57040',
                 contactType: 'customer service',
                 availableLanguage: ['English', 'Hindi', 'Malayalam'],
               },

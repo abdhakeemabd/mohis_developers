@@ -22,7 +22,7 @@ export const FAQSection: React.FC = () => {
     },
     {
       q: 'How fast can a consultation or project quote be arranged?',
-      a: 'You can reach our lead engineers immediately via our Contact page or phone lines (+91 98765 43210 / +91 97452 57040). We provide initial project proposals within 24–48 hours.'
+      a: 'You can reach our lead engineers immediately via our Contact page or phone lines (+91 97452 57040). We provide initial project proposals within 24–48 hours.'
     }
   ];
 

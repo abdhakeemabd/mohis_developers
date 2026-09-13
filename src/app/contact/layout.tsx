@@ -64,7 +64,7 @@ export default function ContactLayout({
             mainEntity: {
               '@type': 'Organization',
               name: 'Mohis Developers',
-              telephone: '+91-98765-43210',
+              telephone: '+91-97452-57040',
               email: 'contact@mohisdevelopers.com',
             },
           }),
