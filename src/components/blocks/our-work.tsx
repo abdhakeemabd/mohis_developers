@@ -35,6 +35,9 @@ import work19 from '@/assets/work/19.webp';
 import work20 from '@/assets/work/20.webp';
 import work21 from '@/assets/work/21.webp';
 import work22 from '@/assets/work/22.webp';
+import eacyclicImg from '@/assets/image/eacyclic.png';
+import eacyclicMobile from '@/assets/image/eacyclic_mobile.png';
+import eacyclicAdmin from '@/assets/image/eacyclic_admin.png';
 import { StaticImageData } from 'next/image';
 
 // ─── Work Image Data ─────────────────────────────────────────────────────────
@@ -44,11 +47,35 @@ interface WorkImage {
   src: string | StaticImageData;
   alt: string;
   title: string;
-  category: 'Interior' | 'Exterior' | 'Civil' | 'All';
+  category: 'Software & Tech' | 'Interior' | 'Exterior' | 'Civil' | 'All';
   span?: 'wide' | 'tall' | 'normal';
 }
 
 const WORK_IMAGES: WorkImage[] = [
+  {
+    id: 101,
+    src: eacyclicImg,
+    alt: 'eacyclic - Full-Stack E-Commerce & Logistics Platform Showcase',
+    title: 'eacyclic Full-Stack E-Commerce Platform',
+    category: 'Software & Tech',
+    span: 'wide',
+  },
+  {
+    id: 102,
+    src: eacyclicMobile,
+    alt: 'eacyclic - iOS & Android Mobile Shopping App Interface',
+    title: 'eacyclic Mobile App View',
+    category: 'Software & Tech',
+    span: 'tall',
+  },
+  {
+    id: 103,
+    src: eacyclicAdmin,
+    alt: 'eacyclic - Admin Control & BI Analytics Panel',
+    title: 'eacyclic Admin & BI Dashboard',
+    category: 'Software & Tech',
+    span: 'wide',
+  },
   {
     id: 1,
     src: work1,
@@ -227,7 +254,7 @@ const WORK_IMAGES: WorkImage[] = [
   },
 ];
 
-const CATEGORIES = ['All', 'Interior', 'Exterior', 'Civil'] as const;
+const CATEGORIES = ['All', 'Software & Tech', 'Interior', 'Exterior', 'Civil'] as const;
 type Category = (typeof CATEGORIES)[number];
 
 
@@ -289,7 +316,7 @@ export const OurWork: React.FC<OurWorkProps> = ({ onOpenModal, isPage = false, t
             </span>
           </h2>
           <p className="text-gray-400 text-base sm:text-lg leading-relaxed font-medium">
-            Every project tells a story of precision craftsmanship. From luxurious interiors to monumental civil structures — explore our delivered milestones.
+            Every project tells a story of precision engineering. From full-stack enterprise software platforms and mobile apps to luxurious interiors and monumental civil structures — explore our delivered milestones.
           </p>
         </motion.div>
 
@@ -372,6 +399,7 @@ export const OurWork: React.FC<OurWorkProps> = ({ onOpenModal, isPage = false, t
             >
               {displayImages.map((img, idx) => {
                 const imageSrc = typeof img.src === 'string' ? img.src : img.src.src;
+                const isTech = img.category === 'Software & Tech';
                 return (
                   <motion.a
                     key={img.id}
@@ -380,30 +408,40 @@ export const OurWork: React.FC<OurWorkProps> = ({ onOpenModal, isPage = false, t
                     data-caption={img.title}
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: (idx % 6) * 0.07 }}
-                  className={`relative group cursor-pointer overflow-hidden rounded-2xl border border-white/10 hover:border-gold/50 transition-all duration-500 block ${
-                    viewMode === 'masonry' ? 'break-inside-avoid mb-4' : ''
-                  }`}
-                >
-                  {/* Image */}
-                  <div
-                    className={`relative overflow-hidden ${
-                      viewMode === 'grid' ? 'aspect-square' : ''
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: (idx % 6) * 0.07 }}
+                    className={`relative group cursor-pointer overflow-hidden rounded-2xl border border-white/10 hover:border-gold/50 transition-all duration-500 block ${
+                      viewMode === 'masonry' ? 'break-inside-avoid mb-4' : ''
                     }`}
                   >
-                    <ImageWithSkeleton
-                      src={img.src}
-                      alt={img.alt}
-                      width={800}
-                      height={600}
-                      className={`w-full object-cover transition-all duration-700 group-hover:scale-110 ${
-                        viewMode === 'masonry' ? 'h-auto' : 'h-full'
-                      }`}
-                      wrapperClassName={viewMode === 'grid' ? 'h-full w-full' : 'w-full'}
-                      loading={idx < 3 ? 'eager' : 'lazy'}
-                      priority={idx < 3}
-                    />
+                    {/* Image */}
+                    <div
+                      className={`relative overflow-hidden ${
+                        viewMode === 'grid' ? 'aspect-square' : ''
+                      } ${isTech ? 'bg-navy-950' : ''}`}
+                    >
+                      <ImageWithSkeleton
+                        src={img.src}
+                        alt={img.alt}
+                        width={800}
+                        height={600}
+                        className={`w-full transition-all duration-700 group-hover:scale-105 ${
+                          isTech
+                            ? 'h-[280px] sm:h-[340px] object-contain p-3 bg-navy-950'
+                            : viewMode === 'masonry'
+                            ? 'h-auto object-cover'
+                            : 'h-full object-cover'
+                        }`}
+                        wrapperClassName={
+                          isTech
+                            ? 'w-full h-full bg-navy-950 flex items-center justify-center'
+                            : viewMode === 'grid'
+                            ? 'h-full w-full'
+                            : 'w-full'
+                        }
+                        loading={idx < 3 ? 'eager' : 'lazy'}
+                        priority={idx < 3}
+                      />
 
                     {/* Overlay on Hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-400 flex items-end p-4">
