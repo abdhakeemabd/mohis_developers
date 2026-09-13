@@ -132,12 +132,12 @@ export const STATS_DATA = [
 import sreenivasanImg from '@/assets/team/sreenivasan.jpeg';
 import musthafaImg from '@/assets/team/musthafa.jpeg';
 import latheefImg from '@/assets/team/latheef.jpeg';
-
+import rishwanaphot from '@/assets/team/Rishwana.jpeg'
 
 export const TEAM_MEMBERS = [
   {
     id: 'latheef',
-    name: 'Latheef',
+    name: 'Mr. Latheef',
     role: 'Chairman',
     badge: 'Executive Governance',
     experience: '18+ Yrs Vision',
@@ -155,7 +155,7 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 'musthafa',
-    name: 'Musthafa',
+    name: 'Mr. Musthafa',
     role: 'Managing Director (MD)',
     badge: 'Executive Leadership',
     experience: '22+ Yrs Leadership',
@@ -173,7 +173,7 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 'sreenivasan',
-    name: 'Sreenivasan',
+    name: 'Mr. Sreenivasan',
     role: 'General Manager (GM)',
     badge: 'Operations & Execution',
     experience: '15+ Yrs Operations',
@@ -191,14 +191,14 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 'risvana',
-    name: 'Risvana',
-    role: 'Marketing Manager',
+    name: 'Mrs. Rishwana Parveen M',
+    role: 'Senior Marketing Manager',
     badge: 'Growth & Strategy',
     experience: '8+ Yrs Brand Strategy',
     iconName: 'TrendingUp',
     bio: 'Leading brand positioning, digital marketing campaigns, SEO strategy, and client relationship expansion across India and GCC.',
     avatarLetter: 'R',
-    avatarUrl: '',
+    avatarUrl: rishwanaphot,
     socials: {
       linkedin: 'https://linkedin.com',
       instagram: 'https://instagram.com',
