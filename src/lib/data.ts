@@ -191,7 +191,7 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 'risvana',
-    name: 'Mrs. Rishwana Parveen M',
+    name: 'Mrs. Rishwana Nainar M',
     role: 'Senior Marketing Manager',
     badge: 'Growth & Strategy',
     experience: '8+ Yrs Brand Strategy',
